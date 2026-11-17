@@ -24,8 +24,8 @@ The system replaces manual, error-prone record-keeping by computing real-time re
 
 ## AI / RAG Pipeline Architecture
 1. The user types a question in the React Chat Widget[cite: 18].
-2. The query is converted into a 1536-dimensional vector using `text-embedding-3-small`[cite: 18].
-3. Parallel execution occurs: `pgvector` performs a similarity search to fetch the top-5 FSSAI document chunks, while the system fetches the user's specific `drug_usage_logs` via a JWT-scoped Supabase client[cite: 18].
+2. The query is converted into a 1536-dimensional vector using text-embedding-3-small [cite: 18].
+3. Parallel execution occurs: pgvector  performs a similarity search to fetch the top-5 FSSAI document chunks, while the system fetches the user's specific `drug_usage_logs` via a JWT-scoped Supabase client[cite: 18].
 4. The system merges the regulatory context and personal farm records into a prompt for the GPT model[cite: 18].
 5. The model streams the response back to the browser in real time[cite: 18].
 
